@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="assets/css/amazeui.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand">
+    <strong>系统研发 · 业务系统</strong> <small>需求管理系统</small>
+  </div>
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-warning am-show-sm-only" data-am-collapse="{target: '#topMenu'}">
+	<span class="am-sr-only">导航切换</span>
+	<span class="am-icon-bars"></span>
+  </button>
+  <div class="am-collapse am-topbar-collapse" id="topMenu">
+
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      
+            <li class="am-dropdown" data-am-dropdown="">
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
+          <span class="am-icon-database"></span> 项目管理 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+                    <li><a href="javascript:void(0);" onclick="redirect('/dev/workdaylog/')"><span class="am-icon-list-alt"></span> 工作总结</a></li>
+                  </ul>
+      </li>
+            
+      <li class="am-dropdown" data-am-dropdown="">
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
+          <span class="am-icon-user"></span> 索攀攀 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="javascript:void(0);" onclick="redirect('/console/manager/changepassword/')"><span class="am-icon-user"></span> 修改密码</a></li>
+          <li><a href="/auth/logout/"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+      <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+<div class="am-cf admin-main">
+  <div class="am-u-md-9 am-u-sm-12">
+    <section class="am-panel am-panel-default">
+      <div class="am-panel-hd">关于我</div>
+      <div class="am-panel-bd">
+		<div class="am-list-news-bd">
+			<ul class="am-list">
+			  <!--缩略图在标题左边-->
+			  <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+				<div class="am-u-sm-2 am-list-thumb">
+				  <a href="http://www.douban.com/online/11614662/">
+					<img src="#" alt="我很囧"
+					  />
+				  </a>
+				</div>
+				<div class="am-u-sm-10 am-list-main">
+				  <h3 class="am-list-item-hd">
+					<a href="http://www.douban.com/online/11614662/">我很囧，你保重....晒晒旅行中的那些囧！</a>
+				  </h3>
+				  <div class="am-list-item-text">囧人囧事囧照，人在囧途，越囧越萌。标记《带你出发，陪我回家》</div>
+				</div>
+			  </li>
+			  <li class="am-g am-list-item-desced">
+				<div class="am-list-main">
+				  <h3 class="am-list-item-hd">
+					<a href="http://www.douban.com/online/11645411/">“你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！</a>
+				  </h3>
+				  <div class="am-list-item-text">还在苦恼圣诞礼物再也玩儿不出新意？快来抢2013最</div>
+				</div>
+			  </li>
+			</ul>
+		 </div>
+		<hr class="am-article-divider blog-hr">
+		<ul class="am-pagination blog-pagination">
+		  <li class="am-pagination-prev"><a href="">&laquo; 上一页</a></li>
+		  <li class="am-pagination-next"><a href="">下一页 &raquo;</a></li>
+		</ul>
+      </div>
+    </section>
+  </div>
+
+	<div class="am-u-md-3 am-u-sm-12">
+    <section class="am-panel am-panel-default">
+      <div class="am-panel-hd">关于我</div>
+      <div class="am-panel-bd">
+        <p>前所未有的中文云端字型服务，让您在 web 平台上自由使用高
+          正是為此而生。</p>
+      </div>
+    </section>
+	<section class="am-panel am-panel-default">
+      <div class="am-panel-hd">关于我</div>
+      <div class="am-panel-bd">
+        <p>前所未有的中文云端字型服务，让您在 web 平台上自由使用高品质中文字体
+          正是為此而生。</p>
+      </div>
+    </section>
+  </div>
+</div>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

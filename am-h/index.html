@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand">
+    <strong>技术中心 · 数据部</strong> <small>后台管理系统</small>
+  </div>
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      
+            <li class="am-dropdown" data-am-dropdown="">
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
+          <span class="am-icon-database"></span> 项目管理 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+                    <li><a href="javascript:void(0);" onclick="redirect('/dev/workdaylog/')"><span class="am-icon-list-alt"></span> 工作总结</a></li>
+                  </ul>
+      </li>
+            
+      <li class="am-dropdown" data-am-dropdown="">
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
+          <span class="am-icon-user"></span> 索攀攀 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="javascript:void(0);" onclick="redirect('/console/manager/changepassword/')"><span class="am-icon-user"></span> 修改密码</a></li>
+          <li><a href="/auth/logout/"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+      <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+<div class="am-cf admin-main">
+  <div id="loading" style="display:none;background-color: #FFCC66;" class="am-text-center am-text-danger"><img src="/assets/icon/loading.gif"></div>
+  <iframe id="frmMain" name="frmMain" src="list.html" width="100%" frameborder="0" scrolling="auto"></iframe>
+</div>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script type="text/javascript">
+    $("#frmMain").height($(window).height() - 57);
+    $(window).resize(function(){
+        $("#frmMain").height($(window).height() - 57);
+    });
+
+    $(function(){
+        $("#frmMain").on('load', function(){
+            $("#loading").hide();
+        });
+    });
+
+    function redirect(url){
+        $("#loading").show();
+        $("#frmMain").attr('src', url);
+        $(".am-dropdown").dropdown('close');
+    }
+</script>
+</body>
+</html>
