@@ -2006,6 +2006,10 @@ fieldset[disabled] .am-btn-link:focus {
   text-decoration: none;
 }
 /* button size */
+.am-btn-ss {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.7rem;
+}
 .am-btn-xs {
   font-size: 1.2rem;
 }
@@ -4107,6 +4111,12 @@ a.am-badge:focus {
     height: 48px;
   }
 }
+.am-comment-main-m {
+  position: relative;
+  margin-left: 0px;
+  border: 1px solid #dedede;
+  border-radius: 0;
+}
 .am-comment-main {
   position: relative;
   margin-left: 42px;
@@ -4138,6 +4148,9 @@ a.am-badge:focus {
   z-index: 2;
 }
 @media only screen and (min-width:641px) {
+  .am-comment-main-m {
+    margin-left: 0px;
+  }
   .am-comment-main {
     margin-left: 63px;
   }
@@ -4210,11 +4223,18 @@ a.am-badge:focus {
 .am-comment-flip .am-comment-avatar {
   float: right;
 }
+.am-comment-flip-m .am-comment-main-m {
+  margin-left: auto;
+  margin-right: 0px;
+}
 .am-comment-flip .am-comment-main {
   margin-left: auto;
   margin-right: 42px;
 }
 @media only screen and (min-width:641px) {
+  .am-comment-flip-m .am-comment-main-m {
+    margin-right: 0px;
+  }
   .am-comment-flip .am-comment-main {
     margin-right: 63px;
   }
@@ -4323,7 +4343,9 @@ a.am-badge:focus {
   list-style: none;
 }
 .am-comments-list .am-comment {
-  margin: 1.6rem 0 0 0;
+  /*suop@2018-09-18@ Remove(margin) and Add(margin-botom)*/
+  /*margin: 1.6rem 0 0 0;*/
+  margin-bottom: 1.6rem;
   list-style: none;
 }
 @media only screen and (min-width:641px) {
@@ -4332,6 +4354,9 @@ a.am-badge:focus {
   }
   .am-comments-list-flip .am-comment-flip .am-comment-main {
     margin-left: 64px;
+  }
+  .am-comment-main-m {
+    margin-right: 0px;
   }
 }
 /* ==========================================================================
@@ -8508,7 +8533,8 @@ img.am-thumbnail,
   z-index: 1020;
   display: none;
   float: left;
-  min-width: 160px;
+  /*suop@ modify(min-width:160)*/
+  min-width: 100px;
   padding: 15px;
   margin: 9px 0 0;
   text-align: left;

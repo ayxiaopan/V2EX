@@ -47,7 +47,7 @@
   </div>
 </header>
 <div class="am-g">
-  <div class="am-u-md-9 am-u-sm-12">
+  <div class="am-u-md-6 am-u-sm-12">
     <ul class="am-comments-list am-comments-list-flip">
 
       <li class="am-comment">
@@ -55,7 +55,7 @@
           New<img src="" alt="" class="am-comment-avatar" width="48" height="48"/>
         </a>
       
-        <div class="am-comment-main">
+        <div class="am-comment-main-m">
           <header class="am-comment-hd">
             <div class="am-comment-meta">
               <a href="#link-to-user" class="am-comment-author">某人</a>
@@ -64,26 +64,24 @@
           </header>
       
           <div class="am-comment-bd">
-               <div class="am-btn-group" data-am-button>
-                    <!--默认选中状态设置-->
-                    <label class="am-btn am-btn-primary am-active">
-                      <input type="checkbox" class="needsclick" name="doc-js-btn" value="苹果" checked> 苹果
-                    </label>
-                    <label class="am-btn am-btn-primary">
-                      <input type="checkbox" class="needsclick" name="doc-js-btn" value="橘子"> 橘子
-                    </label>
-                    <label class="am-btn am-btn-primary">
-                      <input type="checkbox" class="needsclick" name="doc-js-btn" value="香蕉"> 香蕉
-                    </label>
-                </div>
-				<div  id="div3">
-				</div>
+			<div  id="div3">
+			</div>
+			<p>
+				<button type="submit" class="am-btn am-align-left am-btn-danger">取消</button>
+				<button type="submit" class="am-btn am-align-right am-btn-default">提交</button>
+			</p>
           </div>
+
         </div>
       </li>
-    
+
+    </ul>
+  </div>
+  <div class="am-u-md-6 am-u-sm-12">
+     <ul class="am-comments-list am-comments-list-flip">
+
       <li class="am-comment am-comment-flip">
-        <div class="am-comment-main">
+        <div class="am-comment-main-m">
           <header class="am-comment-hd">
             <div class="am-comment-meta">
               <a href="#link-to-user" class="am-comment-author">某人</a>
@@ -98,7 +96,7 @@
       </li>
       
       <li class="am-comment">
-        <div class="am-comment-main">
+        <div class="am-comment-main-m">
           <header class="am-comment-hd">
             <div class="am-comment-meta">
               <a href="#link-to-user" class="am-comment-author">某人</a>
@@ -112,7 +110,7 @@
         </div>
       </li>
       <li class="am-comment am-comment-flip">
-          <div class="am-comment-main">
+          <div class="am-comment-main-m">
             <header class="am-comment-hd">
               <div class="am-comment-meta">
                 <a href="#link-to-user" class="am-comment-author">某人</a>
@@ -127,50 +125,6 @@
         </li>
 
     </ul>
-  </div>
-  <div class="am-u-md-3 am-u-sm-12">
-    <section class="am-panel am-panel-danger">
-      <div class="am-panel-hd">一号BUG</div>
-      <div class="am-panel-bd">
-          <ul class="am-list am-list-static am-list-border">
-              <li>
-                <i class="am-icon-home am-icon-fw"></i>
-                每个人都有一个死角。</li>
-              <li>
-                <i class="am-icon-book am-icon-fw"></i>
-                我把最深沉的秘密放。</li>
-              <li><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</li>
-            </ul>
-      </div>
-    </section>
-    <section class="am-panel am-panel-default">
-        <div class="am-panel-hd">小BUG</div>
-        <div class="am-panel-bd">
-            <ul class="am-list am-list-static am-list-border">
-                <li>
-                  <i class="am-icon-home am-icon-fw"></i>
-                  每个人都有一个死角。</li>
-                <li>
-                  <i class="am-icon-book am-icon-fw"></i>
-                  我把最深沉的秘密放。</li>
-                <li><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</li>
-              </ul>
-        </div>
-      </section>
-      <section class="am-panel am-panel-default">
-          <div class="am-panel-hd">小BUG</div>
-          <div class="am-panel-bd">
-              <ul class="am-list am-list-static am-list-border">
-                  <li>
-                    <i class="am-icon-home am-icon-fw"></i>
-                    每个人都有一个死角。</li>
-                  <li>
-                    <i class="am-icon-book am-icon-fw"></i>
-                    我把最深沉的秘密放。</li>
-                  <li><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</li>
-                </ul>
-          </div>
-       </section>
   </div>
 </div>
 
@@ -200,13 +154,9 @@ var editor2 = new E('#div3')
 editor2.customConfig.menus = [
     'head',  // 标题
     'bold',  // 粗体
-    'fontSize',  // 字号
-    'fontName',  // 字体
-    'italic',  // 斜体
     'underline',  // 下划线
     'strikeThrough',  // 删除线
     'foreColor',  // 文字颜色
-    'backColor',  // 背景颜色
     'link',  // 插入链接
     'quote',  // 引用
     'image',  // 插入图片
