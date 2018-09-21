@@ -201,9 +201,8 @@
 </div>
 
 
-<div class="am-modal am-modal-no-btn" tabindex="-1" id="divEdit">
-  <div class="am-modal-dialog">
-	<div class="am-modal-bd">
+<div id="divEdit" class="am-offcanvas">
+  <div class="am-offcanvas-bar am-offcanvas-bar-flip am-u-md-6 am-u-sm-12">
 
 	<!-- your content -->
       <div class="am-u-md-6 am-u-sm-12">
@@ -286,7 +285,7 @@
 		</ul>
 	  </div>
 	<!-- ./ your content -->
-	</div>
+	
   </div>
 </div>
 
@@ -304,8 +303,7 @@
 <script>
   $(function() {
     $('.sEdit').click(function(){
-		//$('#divEdit').offCanvas('open');
-		$('#divEdit').modal();
+		$('#divEdit').offCanvas('open');
 	});
   });
 </script>

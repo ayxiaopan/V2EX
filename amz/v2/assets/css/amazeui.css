@@ -9089,7 +9089,9 @@ TODO:
   vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
-  width: 270px;
+  /*width: 270px;*/
+  min-width:60%;
+  min-height:56%;
   max-width: 100%;
   border-radius: 0;
   background: #f8f8f8;
@@ -9429,9 +9431,11 @@ TODO:
   bottom: 0;
   left: 0;
   z-index: 1091;
-  width: 270px;
-  max-width: 100%;
-  background: #333;
+  /*suop @ Remove (width:270)*/
+  /*width: 270px;*/
+  min-width: 30%;
+  max-width: 90%;
+  background: #f2f2f2;
   overflow-y: auto;
   /* scrollable */
   -webkit-overflow-scrolling: touch;

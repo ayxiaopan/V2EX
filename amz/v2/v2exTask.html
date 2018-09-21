@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js fixed-layout">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>页面标题</title>
+  <meta name="description" content="这是一个 index 页面">
+  <meta name="keywords" content="页面关键字了">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <!--360极速模式-->
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!--普通浏览器和苹果浏览器图标ICON-->
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <!--样式-->
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body style="background: #f3f3f3;">
+<header class="am-topbar">
+  <div class="am-topbar-brand">
+    <strong>系统研发 · 业务系统</strong> <small>需求管理系统</small>
+  </div>    
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-warning am-show-sm-only" data-am-collapse="{target: '#topMenu'}">
+    <span class="am-sr-only">导航切换</span>
+    <span class="am-icon-bars"></span>
+  </button>
+  <div class="am-collapse am-topbar-collapse" id="topMenu">
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li class="am-dropdown" data-am-dropdown="">
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
+          <span class="am-icon-user"></span> 索攀攀 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="javascript:void(0);" onclick="redirect('/console/manager/changepassword/')"><span class="am-icon-user"></span> 修改密码</a></li>
+          <li><a href="/auth/logout/"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+      <li class="am-hide-sm-only">
+        <a href="javascript:;" id="admin-fullscreen">
+          <span class="am-icon-arrows-alt"></span>
+          <span class="admin-fullText">开启全屏</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+<div class="am-g">
+  <div class="am-u-md-9 am-u-sm-12">
+    <section class="am-panel am-panel-default">
+      <div class="am-panel-hd">需求排期 <small>Task Plan<small></div>
+      <div class="am-panel-bd">
+          <div class="am-list-news-bd">
+            <ul class="am-list">
+              <li class="am-list-item-desced">
+              <span class="am-badge am-fr am-badge-secondary">2018-01-01</span>
+              <div class="am-list-main">
+                <h3 class="am-list-item-hd">
+                <a href="http://www.douban.com/online/11645411/">你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！</a>
+                </h3>
+                <div class="am-list-item-text">最后沟通时间 · 2018-07-26 · 张三利息塑封袋要放大镜</div>
+              </div>
+
+              </li>
+
+              <li class="am-list-item-desced">
+              <span class="am-badge am-fr am-badge-secondary">沟通调研</span>
+              <div class="am-list-main">
+                <h3 class="am-list-item-hd">
+                <a href="http://www.douban.com/online/11645411/">你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！</a>
+                </h3>
+                <div class="am-list-item-text">最后沟通时间 · 2018-07-26 · 张三利息塑封袋要放大镜</div>
+              </div>
+
+              </li>
+            </ul>
+           </div>
+        
+          <ul class="am-pagination">
+              <li class="am-pagination-prev"><a href="">&laquo; Prev</a></li>
+              <li class="am-pagination-next"><a href="">Next &raquo;</a></li>
+          </ul>
+      </div>
+    </section>
+  </div>
+  <div class="am-u-md-3 am-u-sm-12">  
+      <section class="am-panel am-panel-default">
+          <div class="am-panel-hd">通知</div>
+          <div class="am-panel-bd">
+              <ul class="am-list am-list-static am-list-border">
+                  <li>
+                    <i class="am-icon-home am-icon-fw"></i>
+                    每个人都有一个死角。</li>
+                  <li>
+                    <i class="am-icon-book am-icon-fw"></i>
+                    我把最深沉的秘密放。</li>
+                  <li><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</li>
+                </ul>
+          </div>
+        </section>
+    <section class="am-panel am-panel-danger">
+      <div class="am-panel-hd">开发中</div>
+      <div class="am-panel-bd">
+          <ul class="am-list am-list-static am-list-border">
+              <li>
+                <i class="am-icon-home am-icon-fw"></i>
+                每个人都有一个死角。</li>
+              <li>
+                <i class="am-icon-book am-icon-fw"></i>
+                我把最深沉的秘密放。</li>
+              <li><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</li>
+            </ul>
+      </div>
+    </section>
+    <section class="am-panel am-panel-success">
+        <div class="am-panel-hd">完成未上线</div>
+        <div class="am-panel-bd">
+            <ul class="am-list am-list-static am-list-border">
+                <li>
+                  <i class="am-icon-home am-icon-fw"></i>
+                  每个人都有一个死角。</li>
+                <li>
+                  <i class="am-icon-book am-icon-fw"></i>
+                  我把最深沉的秘密放。</li>
+                <li><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</li>
+              </ul>
+        </div>
+      </section>
+  </div>
+</div>
+
+
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="divDevInfo">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">Modal 标题
+      <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+    </div>
+    <div class="am-modal-bd">
+      Modal 内容。
+    </div>
+  </div>
+</div>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+  $(function() {
+    var $modal = $('#your-modal');
+
+    $modal.siblings('.am-btn').on('click', function(e) {
+      var $target = $(e.target);
+      if (($target).hasClass('js-modal-open')) {
+        $modal.modal();
+      } else if (($target).hasClass('js-modal-close')) {
+        $modal.modal('close');
+      } else {
+        $modal.modal('toggle');
+      }
+    });
+  });
+</script>
+</body>
+</html>
