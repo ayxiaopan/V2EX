@@ -203,7 +203,7 @@
 
 <div class="am-modal am-modal-no-btn" tabindex="-1" id="divEdit">
   <div class="am-modal-dialog">
-	<div class="am-modal-bd">
+	<div class="am-modal-bd" style="text-align:left;">
 
 	<!-- your content -->
       <div class="am-u-md-6 am-u-sm-12">
@@ -215,14 +215,8 @@
 			</a>
 		  
 			<div class="am-comment-main-m">
-			  <header class="am-comment-hd">
-				<div class="am-comment-meta">
-				  <a href="#link-to-user" class="am-comment-author">某人</a>
-				  于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time> 提出
-				</div>
-			  </header>
 		  
-			  <div class="am-comment-bd">
+			  <div class="am-comment-bd"style="padding:0px;">
 				<div  id="div3">
 				</div>
 				<p>
@@ -299,10 +293,16 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
 <!--<![endif]-->
+<script src="assets/lib/wangEditor/release/wangEditor.js" ></script>
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script>
+  //editor2
+  var E = window.wangEditor
+  var editor2 = new E('#div3')
   $(function() {
+    editor2.create();
+    //Popu Div Edit
     $('.sEdit').click(function(){
 		//$('#divEdit').offCanvas('open');
 		$('#divEdit').modal();

@@ -298,10 +298,27 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
 <!--<![endif]-->
+<script src="https://unpkg.com/wangeditor/release/wangEditor.min.js" ></script>
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
-<script>
+<script>  
+  var E = window.wangEditor;
+  var editor2 = new E('#div3');
   $(function() {
+    // 自定义菜单配置
+    editor2.customConfig.menus = [
+        'head',  // 标题
+        'bold',  // 粗体
+        'underline',  // 下划线
+        'strikeThrough',  // 删除线
+        'foreColor',  // 文字颜色
+        'link',  // 插入链接
+        'quote',  // 引用
+        'image',  // 插入图片
+        'table',  // 表格
+        ]
+    editor2.create();
+    //Popu Div Edit
     $('.sEdit').click(function(){
 		$('#divEdit').offCanvas('open');
 	});
