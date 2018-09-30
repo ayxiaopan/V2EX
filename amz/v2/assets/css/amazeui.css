@@ -4119,7 +4119,8 @@ a.am-badge:focus {
 }
 .am-comment-main {
   position: relative;
-  margin-left: 42px;
+  /* Suop @ Remove (margin-left:42) */
+  /*margin-left: 42px;*/
   border: 1px solid #dedede;
   border-radius: 0;
 }

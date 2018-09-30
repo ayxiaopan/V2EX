@@ -50,44 +50,27 @@
   <div class="am-u-md-9 am-u-sm-12">
     <ul class="am-comments-list am-comments-list-flip">
 
-      <li class="am-comment">
-        <a href="#link-to-user-home" style="display:none;">
-          New<img src="" alt="" class="am-comment-avatar" width="48" height="48"/>
-        </a>
-      
+      <li class="am-comment">      
         <div class="am-comment-main">
           <header class="am-comment-hd">
             <div class="am-comment-meta">
-              <a href="#link-to-user" class="am-comment-author">某人</a>
-              于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time> 提出
+              <a href="#link-to-user" class="am-comment-author">需求变更</a>
             </div>
           </header>
       
           <div class="am-comment-bd">
-               <div class="am-btn-group" data-am-button>
-                    <!--默认选中状态设置-->
-                    <label class="am-btn am-btn-primary am-active">
-                      <input type="checkbox" class="needsclick" name="doc-js-btn" value="苹果" checked> 苹果
-                    </label>
-                    <label class="am-btn am-btn-primary">
-                      <input type="checkbox" class="needsclick" name="doc-js-btn" value="橘子"> 橘子
-                    </label>
-                    <label class="am-btn am-btn-primary">
-                      <input type="checkbox" class="needsclick" name="doc-js-btn" value="香蕉"> 香蕉
-                    </label>
-                </div>
 				<div  id="div3">
 				</div>
           </div>
         </div>
       </li>
     
-      <li class="am-comment am-comment-flip">
+      <li class="am-comment">
         <div class="am-comment-main">
           <header class="am-comment-hd">
             <div class="am-comment-meta">
               <a href="#link-to-user" class="am-comment-author">某人</a>
-              于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time> 提出
+              于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time> 变更
             </div>
           </header>
       
@@ -102,7 +85,7 @@
           <header class="am-comment-hd">
             <div class="am-comment-meta">
               <a href="#link-to-user" class="am-comment-author">某人</a>
-              于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time> 提出
+              于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time> 变更
             </div>
           </header>
       
@@ -111,12 +94,12 @@
           </div>
         </div>
       </li>
-      <li class="am-comment am-comment-flip">
+      <li class="am-comment">
           <div class="am-comment-main">
             <header class="am-comment-hd">
               <div class="am-comment-meta">
                 <a href="#link-to-user" class="am-comment-author">某人</a>
-                于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time> 提出
+                于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time> 变更
               </div>
             </header>
         
@@ -178,7 +161,7 @@
 <!--回到顶部-->
 <div data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
     <a href="#top" title="">
-          <i class="am-gotop-icon am-icon-hand-o-up"></i>
+          <i class="am-gotop-icon am-icon-chevron-circle-up"></i>
     </a>
 </div>
 <!--[if lt IE 9]>
@@ -190,29 +173,77 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
 <!--<![endif]-->
-<script src="https://unpkg.com/wangeditor/release/wangEditor.min.js" ></script>
+<script src="assets/lib/wangEditor/release/wangEditor.min.js" ></script>
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script>
-var E = window.wangEditor
-var editor2 = new E('#div3')
-// 自定义菜单配置
-editor2.customConfig.menus = [
-    'head',  // 标题
-    'bold',  // 粗体
-    'fontSize',  // 字号
-    'fontName',  // 字体
-    'italic',  // 斜体
-    'underline',  // 下划线
-    'strikeThrough',  // 删除线
-    'foreColor',  // 文字颜色
-    'backColor',  // 背景颜色
-    'link',  // 插入链接
-    'quote',  // 引用
-    'image',  // 插入图片
-    'table',  // 表格
-    ]
-editor2.create();
+var E = window.wangEditor;
+  var editor2 = new E('#div3');
+  $(function() {
+		/* 处理上传图片的controller路径 */
+		editor2.customConfig.uploadImgServer = '/admin/uploadImg'
+		/* 上传文件大小限制 */
+		editor2.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;
+		/* 限制一次最多上传 5 张图片 */
+		editor2.customConfig.uploadImgMaxLength = 5;    
+		/* 定义上传图片的默认名字 */
+		editor2.customConfig.uploadFileName = 'myFileName'
+		editor.customConfig.uploadImgHooks = {    
+			before: function (xhr, editor, files) {
+			// 图片上传之前触发
+			// xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+			// 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+			// return {
+				//     prevent: true,
+				//     msg: '放弃上传'
+			// }    
+			},    
+			success: function (xhr, editor, result) {
+			// 图片上传并返回结果，图片插入成功之后触发
+			// xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果    
+			},    
+			fail: function (xhr, editor, result) {        
+				// 图片上传并返回结果，但图片插入错误时触发        
+				// xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果    
+			},    
+			error: function (xhr, editor) {        
+				// 图片上传出错时触发        
+				// xhr 是 XMLHttpRequst 对象，editor 是编辑器对象    
+			},    
+			timeout: function (xhr, editor) {        
+				// 图片上传超时时触发        
+				// xhr 是 XMLHttpRequst 对象，editor 是编辑器对象    
+			},     
+			
+			// 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置    
+			// （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）    
+			customInsert: function (insertImg, result, editor) {        
+				// 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）        
+				// insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果         
+				// 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：       
+				insertImg(result.data);
+				// result 必须是一个 JSON 格式字符串！！！否则报错    
+			}
+		}
+
+		// 自定义菜单配置
+		editor2.customConfig.menus = [
+			'head',  // 标题
+			'bold',  // 粗体
+			'underline',  // 下划线
+			'strikeThrough',  // 删除线
+			'foreColor',  // 文字颜色
+			'link',  // 插入链接
+			'quote',  // 引用
+			'image',  // 插入图片
+			'table',  // 表格
+			]
+		editor2.create();
+		//Popu Div Edit
+		$('.sEdit').click(function(){
+			$('#divEdit').offCanvas('open');
+		});
+  });
 </script>
 </body>
 </html>
